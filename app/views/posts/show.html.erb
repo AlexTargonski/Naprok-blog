@@ -1,7 +1,7 @@
 <!-- Page Content -->
 <div class="container post-container">
  <div class="row">
-      <%= image_tag @post.image %>
+      <%= image_tag @post.image, class: 'post-photo' %>
     <div class="col-md-12">
       <h1 class="page-header"><%= @post.title %></h1>
       <p><%= @post.body %></p>

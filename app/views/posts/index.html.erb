@@ -1,38 +1,25 @@
-    <div class="header" id="home">
-      <div class="logo">
-        <a href="">
-          <%= image_tag "logo.svg", class: "img-responsive" %>
-        </a>
-      </div>
-      <div class="container">
-        <div class="home">
-          <h1>NAPROK BLOG</h1>
-          <h2 class="hidden-xs hidden-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
-        </div>
-      </div>
-    </div>
-
-<section id="posts">
+<div id="posts">
     <div class="container">
+        <h1>Posts</h1>
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Posts</h2>
-                <hr class="star-primary">
-            </div>
-        </div>
-        <div class="row">
+              <% if @posts.present? %>
                 <% @posts.each do |post| %>
-                <div class="col-sm-4 portfolio-item">
-                <%= link_to post_path(post) do %>
-                  <%= image_tag post.image, class: 'img-responsive' %>
-                <% end %>
+                <div class="col-sm-4">
+                  <div class="posts-item">
+                    <%= image_tag post.image, class: 'preview' %>
+                    <div class="description">
+                      <h2><%= post.title %></h2>
+                      <%= link_to post_path(post) do %><button class="read-more">Read more</button><% end %>
+                    </div>
+                  </div>
                 </div>
-            <% end %>
+              <% end %>
+            <% else %>
+            <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+<% end %>
         </div>
     </div>
-</section>
-
-<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+</div>
 <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
     <a class="btn btn-primary" href="#page-top">
         <i class="fa fa-chevron-up"></i>
