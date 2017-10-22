@@ -59,6 +59,17 @@ h2{
 box-shadow: 0px 0px 16px -7px rgba(135,135,135,1);
 min-height: 700px;
 margin-bottom: 30px;
+z-index: 1000;
+  -webkit-transition: all 0.3s ease;;
+  -moz-transition: all 0.3s ease;;
+  -o-transition: all 0.3s ease;;
+  transition: all 0.3s ease;
+}
+
+.posts-item:hover{
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .read-more{
@@ -106,5 +117,26 @@ margin-bottom: 30px;
 
   .fa{
     color: #fff;
+  }
+}
+
+.pagination{
+  a, a:hover{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  span{
+    background: #003C54;
+    padding: 10px;
+  }
+
+  .page.current {
+    color: #fff;
+    background: #0099AD;
+  }
+
+  span:hover{
+    background: #0099AD;
   }
 }

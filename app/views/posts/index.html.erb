@@ -1,6 +1,5 @@
 <div id="posts">
     <div class="container">
-        <h1>Posts</h1>
         <div class="row">
               <% if @posts.present? %>
                 <% @posts.each do |post| %>
@@ -16,7 +15,9 @@
               <% end %>
             <% else %>
             <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
-<% end %>
+          <% end %>
+          <div class="clearfix"></div>
+          <div class="text-center"><%= paginate @posts %></div>
         </div>
     </div>
 </div>
