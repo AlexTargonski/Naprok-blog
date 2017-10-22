@@ -92,6 +92,16 @@ z-index: 1000;
 
 .menu-item{
   padding: 30px !important;
+
+  a{
+    color: #003C54;
+    font-weight: bold;
+  }
+
+  a:hover{
+    color: #0099AD;
+    text-decoration: none;
+  }
 }
 
 #search-form{
@@ -118,6 +128,10 @@ z-index: 1000;
   .fa{
     color: #fff;
   }
+
+  button:hover{
+    background: #0099AD;
+  }
 }
 
 .pagination{
@@ -138,5 +152,22 @@ z-index: 1000;
 
   span:hover{
     background: #0099AD;
+  }
+}
+
+.footer{
+  background: #003C54;
+  min-height: 300px;
+
+  .fa{
+    color: #fff;
+  }
+
+  h4{
+    color: #fff;
+  }
+
+  .contacts, .social{
+    padding: 35px;
   }
 }
