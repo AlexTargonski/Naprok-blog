@@ -9,6 +9,7 @@
                     <div class="description">
                       <h2><%= post.title %></h2>
                       <%= link_to post_path(post) do %><button class="read-more">Read more</button><% end %>
+                      <p>Created:</p><%= post.created_at.strftime("%B %d, %Y") %>
                     </div>
                   </div>
                 </div>
