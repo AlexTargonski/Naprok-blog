@@ -5,6 +5,7 @@
     <div class="col-md-12">
       <h1 class="page-header"><%= @post.title %></h1>
       <p class="post-text"><%= @post.body %></p>
+      <p> Author: <%= @post.author.fullname %></p>
     </div>
   </div>
   <%= render 'comments' %>
