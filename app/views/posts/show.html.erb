@@ -1,11 +1,12 @@
 <!-- Page Content -->
+<div class="post-photo" style='background: url("<%= @post.image.url %>");background-repeat:repeat-x;background-position: top center;background-attachment: fixed;background-size: cover;'>
+</div>
 <div class="container post-container">
- <div class="row">
-      <%= image_tag @post.image, class: 'post-photo' %>
+  <div class="row">
     <div class="col-md-12">
       <h1 class="page-header"><%= @post.title %></h1>
       <p class="post-text"><%= @post.body %></p>
-      <p> Author: <%= @post.author.fullname %></p>
+      <p> Author: <%= @post.author.name %></p>
     </div>
   </div>
   <%= render 'comments' %>
