@@ -40,6 +40,12 @@ h2{
 #posts{
 	margin-top: 50px;
 	margin-bottom: 50px;
+  min-height: 700px;
+}
+
+.post-photo{
+  min-height: 500px;
+  width: 100%;
 }
 
 .description{
@@ -175,3 +181,4 @@ z-index: 1000;
 .post-text{
   font-size: 20px;
 }
+

@@ -1,21 +1,23 @@
 ActiveAdmin.register Author do
-	permit_params :fullname, :position, :avatar
+	permit_params :name, :position 
 
-		show do |t|
-			attributes_table do
-				row :fullname
-				row :position
-				
-			end
-		end
+  index do
+    selectable_column
+    column :name
+    column :position
+    actions
+  end
 
-		form :html => { :enctype => "multipart/form-data" } do |f|
-			f.inputs do
-				f.input :fullname
-				f.input :position
-			
-			end
-			f.actions
-		end
+  show do
+    p author.name
+    p author.position
+  end
+
+  form do |f|
+    f.inputs 'Author Editing' do
+      f.input :name
+      f.input :position
+    end
+    f.actions
+  end
 end
-

@@ -9,13 +9,13 @@
                     <div class="description">
                       <h2><%= post.title %></h2>
                       <%= link_to post_path(post) do %><button class="read-more">Read more</button><% end %>
-                      <p>Created <%= post.created_at.strftime("%B %d, %Y") %> by <%= post.author.fullname %></p>
+                      <p>Created <%= post.created_at.strftime("%B %d, %Y") %> by <%= post.author.name %></p>
                     </div>
                   </div>
                 </div>
               <% end %>
             <% else %>
-            <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+            <p>There are no posts <%= params[:search] %>.</p>
           <% end %>
           <div class="clearfix"></div>
           <div class="text-center"><%= paginate @posts %></div>
