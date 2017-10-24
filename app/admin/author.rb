@@ -1,5 +1,5 @@
 ActiveAdmin.register Author do
-	permit_params :name, :position 
+	permit_params :name, :position, :avatar 
 
   index do
     selectable_column
@@ -17,6 +17,7 @@ ActiveAdmin.register Author do
     f.inputs 'Author Editing' do
       f.input :name
       f.input :position
+      f.input :avatar, hint: f.author.avatar? ? image_tag(author.avatar.url, height: '100') : content_tag(:span, "Upload JPG/PNG/GIF image")
     end
     f.actions
   end
