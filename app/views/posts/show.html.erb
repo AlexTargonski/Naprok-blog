@@ -2,17 +2,15 @@
 <div class="post-photo" style='background: url("<%= @post.image.url %>");background-repeat:repeat-x;background-position: top center;background-attachment: fixed;background-size: cover;'>
 </div>
 <div class="container post-container">
-  <div class="row">
     <div class="col-md-12">
-      <h1 class="page-header"><%= @post.title %></h1>
+      <h1><%= @post.title %></h1>
+      <p class="text-center"><b><i>Author: <%= @post.author.name %></i></b></p>
       <p class="post-text"><%= @post.body %></p>
-      <p> Author: <%= @post.author.name %></p>
     </div>
-  </div>
   <%= render 'comments' %>
 <div class="row">
   <div class="col-lg-12">
-    <h3 class="page-header">Related Posts</h3>
+    <h3>Related Posts</h3>
   </div>
   <% @posts.each do |post| %>
     <div class="col-sm-3 col-xs-6">
