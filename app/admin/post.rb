@@ -1,5 +1,13 @@
 ActiveAdmin.register Post do
-		permit_params :title, :body, :image, :author_id, :author
+	controller do
+    def find_resource
+      scoped_collection.where(slug: params[:id]).last!
+    rescue ActiveRecord::RecordNotFound
+      scoped_collection.find(params[:id])
+    end
+  end
+
+	permit_params :title, :body, :image, :author_id, :author
 
   index do
     selectable_column
