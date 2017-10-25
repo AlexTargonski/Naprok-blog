@@ -17,9 +17,12 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'kaminari'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'active_skin'
+gem 'friendly_id'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :development do

@@ -4,7 +4,12 @@
 <div class="container post-container">
     <div class="col-md-12">
       <h1><%= @post.title %></h1>
-      <p class="text-center"><b><i>Author: <%= @post.author.name %></i></b></p>
+      <p>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <i><%= @post.author.name %></i>
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <i><%= @post.created_at.strftime("%B %d, %Y") %></i>
+      </p>
       <p class="post-text"><%= @post.body %></p>
     </div>
   <%= render 'comments' %>
