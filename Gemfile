@@ -20,9 +20,9 @@ gem 'active_skin'
 gem 'friendly_id'
 
 group :development, :test do
-  gem 'byebug', platform: :mri
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'shoulda'
 end
 
 group :development do
