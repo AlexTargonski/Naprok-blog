@@ -10,7 +10,7 @@
         <i class="fa fa-clock-o" aria-hidden="true"></i>
         <i><%= @post.created_at.strftime("%B %d, %Y") %></i>
       </p>
-      <p class="post-text"><%= @post.body %></p>
+      <p class="post-text"><%= @post.body.html_safe %></p>
     </div>
   <%= render 'comments' %>
 <div class="row">

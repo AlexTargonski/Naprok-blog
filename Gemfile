@@ -18,6 +18,7 @@ gem 'kaminari'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'active_skin'
 gem 'friendly_id'
+gem 'ckeditor'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -31,7 +31,7 @@ ActiveAdmin.register Post do
 		form :html => { :enctype => "multipart/form-data" } do |f|
 			f.inputs 'Post Editing' do
 				f.input :title
-				f.input :body
+				f.input :body, :as => :ckeditor
 				f.input :author 
 				f.input :image, hint: f.post.image? ? image_tag(post.image.url, height: '100') : content_tag(:span, "Upload JPG/PNG/GIF image")
 			end
