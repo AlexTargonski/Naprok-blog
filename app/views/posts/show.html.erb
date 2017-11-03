@@ -1,4 +1,6 @@
-<!-- Page Content -->
+<% content_for :head do %>
+  <meta property="og:image" content='<%= @post.image.url %>'/>
+<% end %>
 <div class="post-photo" style='background: url("<%= @post.image.url %>");background-repeat:repeat-x;background-position: top center;background-attachment: fixed;background-size: cover;'>
 </div>
 <div class="container post-container">
