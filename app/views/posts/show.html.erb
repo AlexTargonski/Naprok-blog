@@ -4,7 +4,7 @@
   <%= tag :meta, property:"og:image", content: request.protocol + request.host_with_port + image_path( @post.image.url) %>
   <%= tag :meta, property: "twitter:card", content: "summary" %>
   <%= tag :meta, property: "twitter:title", content: @post.title %>
-  <%= tag :meta, property:"twitter:card", content: request.protocol + request.host_with_port + image_path( @post.image.url) %>
+  <%= tag :meta, property:"twitter:image", content: request.protocol + request.host_with_port + image_path( @post.image.url) %>
 <% end %>
 <div class="post-photo" style='background: url("<%= @post.image.url %>");background-repeat:repeat-x;background-position: top center;background-attachment: fixed;background-size: cover;'>
 </div>
