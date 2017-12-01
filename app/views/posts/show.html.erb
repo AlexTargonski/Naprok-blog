@@ -19,17 +19,7 @@
       </p>
       <p class="post-text"><%= @post.body.html_safe %></p>
     </div>
-  <%= render 'comments' %>
-<div class="row">
-  <div class="col-lg-12">
-    <h3>Related Posts</h3>
-  </div>
-  <% @posts.each do |post| %>
-    <div class="col-sm-3 col-xs-6">
-      <%= link_to post_path(post) do %>
-      <%= image_tag post.image, class: 'img-responsive portfolio-item' %>
-  <% end %>
+    <div class="comments">
+      <%= render 'comments' %>
     </div>
-  <% end %>
-</div>
 </div>
